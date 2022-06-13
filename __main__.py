@@ -20,14 +20,23 @@ def endShell():
 #time.sleep(2)
 
 class BlConCommands:
-        def stamode(self, *args,):
+        def stamode(self, timeout=None, *args,):
                 """
-                connect to known WiFis automatically
+                Connect to known WiFis automatically. Starts sshd.
+                @param timeout After time in minutes elapses, do wifioff. Default: infinite.
                 """
                 pass
-        def apmode(self, *args,):
+        def apmode(self, apname, apkey, timeout=15, *args,):
                 """
-                start an Access Point to enable clients to connect to the WiFi and use ssh for advanced system access
+                Start an Access Point to enable clients to connect to the WiFi and use ssh for advanced system access. Starts sshd.
+                @param apname ESSID of Access Point to announce.
+                @param apkey Password of Access Point.
+                @param timeout After time in minutes elapses, do wifioff. Default: 15 minutes.
+                """
+                pass
+        def wifioff(self, *args,):
+                """
+                Stops sshd, disconnects WiFi by using rfkill.
                 """
                 pass
         def reboot(self, *args,):
