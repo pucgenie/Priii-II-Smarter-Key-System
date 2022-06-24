@@ -6,11 +6,10 @@
 from bluedot.btcomm import BluetoothServer
 # import bluetooth
 from systemd import journal
-
+from systemd.daemon import notify, Notification
 
 def beginShell():
 	pass
-
 
 def endShell():
 	"""
@@ -115,7 +114,7 @@ class BlConCommands:
 
 	def osexec(self, *args,):
 		"""
-		Execute something, quick'n'dirty.
+		Execute something, quick'n'dirty. Or start bash.
 		"""
 		pass
 
